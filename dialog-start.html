@@ -5,9 +5,10 @@
 <title>Passdown Sign-in</title>
 <script>
 (function () {
-  var bridge = new URLSearchParams(location.search).get("to") || "ena_passdownaddinbridge4e7a91c3";
-  if (!/^[A-Za-z0-9_][A-Za-z0-9_.\/-]*$/.test(bridge) || bridge.indexOf("..") >= 0) bridge = "ena_passdownaddinbridge4e7a91c3";
-  location.replace("https://orgd3c45d60.crm4.dynamics.com/WebResources/" + bridge.split("/").map(encodeURIComponent).join("/"));
+  var bridge = new URLSearchParams(location.search).get("to") || "ena_passdownaddinbridgec83f1d07";
+  if (!/^[A-Za-z0-9_][A-Za-z0-9_.\/-]*$/.test(bridge) || bridge.indexOf("..") >= 0) bridge = "ena_passdownaddinbridgec83f1d07";
+  location.replace("https://orgd3c45d60.crm4.dynamics.com/WebResources/" + bridge.split("/").map(encodeURIComponent).join("/") +
+    "?parent=" + encodeURIComponent(location.origin));
 })();
 </script>
 </head>
